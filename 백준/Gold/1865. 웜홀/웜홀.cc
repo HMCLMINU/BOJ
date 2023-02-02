@@ -54,7 +54,7 @@ int main()
                 int t = pq.top().eff;
                 int cnt = pq.top().cnt;
                 pq.pop();
-                if (time[i] < 0 || cnt>=(N-1)*2) break;
+                if (time[i] < 0 || cnt>(N-1)*2) break;
                 if (time[vex] < t) continue;
                 
 
