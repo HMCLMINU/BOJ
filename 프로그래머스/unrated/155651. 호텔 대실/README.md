@@ -1,10 +1,10 @@
 # [unrated] 호텔 대실 - 155651 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/155651?language=cpp) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/155651?language=cpp#) 
 
 ### 성능 요약
 
-메모리: 3.98 MB, 시간: 1.61 ms
+메모리: 3.95 MB, 시간: 0.32 ms
 
 ### 구분
 
