@@ -4,7 +4,7 @@
 using namespace std;
 
 vector<string> answer;
-bool visited[100000001];
+bool visited[100001];
 bool check = false;
 
 
