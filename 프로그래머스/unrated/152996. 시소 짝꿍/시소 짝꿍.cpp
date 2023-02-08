@@ -1,36 +1,37 @@
 #include <string>
 #include <vector>
-#include <iostream>
-#include <map>
-#include <set>
-
+#include <algorithm>
 using namespace std;
-
-int r[3]={2, 1, 3};
-int d[3]={3, 2, 4};
 
 long long solution(vector<int> weights) {
     long long answer = 0;
-    
-    set<int> w;
-    map<int, int> wc;
-    
-    for (auto& i:weights){
-        w.insert(i);
-        wc[i]++;
-    }
-    
-    for (auto& weight : w){
-        long long wSize=wc[weight];
-        answer += wSize*(wSize-1)/2;
-        
-        for (int i=0; i<3; i++){
-            if (weight*r[i]%d[i]) continue;
-            
-            int calc = weight*r[i]/d[i];
-            // cout << weight << " " << calc << endl;
-            long long num = wc[calc];
-            answer += wSize * num;
+    sort(weights.begin(),weights.end());
+    for(int i = 0; i < weights.size()-1; i++){
+        for(int j = i+1; j <weights.size(); j++){
+            if(weights[i]==weights[j]){
+                answer++;
+                continue;
+            }
+            if(weights[i]*4 > weights[j]*3){
+                continue;
+            }
+            if(weights[i]*4 == weights[j]*3){
+                answer++;
+                continue;
+            }
+            if(weights[i]*3 > weights[j]*2){
+                continue;
+            }
+            if(weights[i]*3 == weights[j]*2){
+                answer++;
+                continue;
+            }
+            if(weights[i]*2 > weights[j]){
+                continue;
+            }
+            if(weights[i]*2 == weights[j]){
+                answer++;
+            }
         }
     }
     return answer;
