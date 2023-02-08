@@ -6,7 +6,7 @@ using namespace std;
 int dr[4]={10, 20, 30, 40};
 int ans1, ans2;
 
-void dfs(vector<int> discountRate, vector<vector<int>> users, vector<int> emoticons){
+void dfs(vector<int>& discountRate, vector<vector<int>>& users, vector<int>& emoticons){
     if (discountRate.size()==emoticons.size()){
         int serviceUser=0;
         int salesMoney=0;
