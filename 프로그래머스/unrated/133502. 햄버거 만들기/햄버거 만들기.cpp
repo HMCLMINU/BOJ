@@ -1,22 +1,16 @@
 #include <string>
 #include <vector>
-#include <iostream>
-
 using namespace std;
-// 1231
-int order[4]={1, 2, 3, 1};
+
 int solution(vector<int> ingredient) {
     int answer = 0;
-    string str="";
-    for (auto& i:ingredient){
-        str+=to_string(i);
-    }
-    int pos=0;
-    while (str.find("1231", pos)!=string::npos){
-        int idx = str.find("1231", pos);
-        str.erase(idx, 4);
-        if (idx>2) pos=idx-3;
-        answer++;
-    }
+    vector<int> v = { -1 };
+    for(int x : ingredient){
+        if(v.back() == 1 && x == 2) v.back() = 12;
+        else if(v.back() == 12 && x == 3) v.back() = 123;
+        else if(v.back() == 123 && x == 1) answer++, v.pop_back();
+        else v.push_back(x);
+    }    
+
     return answer;
 }
