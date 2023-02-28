@@ -24,13 +24,12 @@ vector<int> solution(vector<string> keymap, vector<string> targets) {
         bool ch=false;
         for (int j=0; j<i.size(); j++){
             if (!hash[i[j]]) {
-                ch=true;
+                sum=-1;
                 break;
             }
             else sum+=hash[i[j]];
         }
-        if (ch) answer.push_back(-1);
-        else answer.push_back(sum);
+        answer.push_back(sum);
     }
     
     return answer;
