@@ -12,6 +12,7 @@ int solution(int n, vector<vector<int>> lighthouse) {
     unordered_map<int, int> removedRoad;
     int num = lighthouse.size();
     while (true){
+        // 모든 뱃길이 제거됐는지 확인
         int sum=0;
         for (auto i:removedRoad){
             sum+=i.second;
@@ -29,7 +30,6 @@ int solution(int n, vector<vector<int>> lighthouse) {
         for (int i=1; i<=n; i++) {
             // 리프 등대면 연결 등대 on
             if (graph[i].size()==1 && !hash[graph[i][0]] && !hash[i]) {
-                // cout << graph[i][0] << endl;
                 hash[graph[i][0]]=1;
                 answer++;
             }
