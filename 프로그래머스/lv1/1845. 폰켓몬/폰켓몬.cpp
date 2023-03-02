@@ -14,7 +14,6 @@ int solution(vector<int> nums)
     }
     
     int choiceNum = nums.size()/2;
-    if (spieces >= choiceNum) answer = choiceNum;
-    else answer = spieces;
+    answer = min(spieces, choiceNum);
     return answer;
 }
