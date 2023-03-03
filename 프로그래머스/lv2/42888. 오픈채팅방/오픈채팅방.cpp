@@ -15,16 +15,13 @@ vector<string> solution(vector<string> record) {
     // id, 명령 저장 큐
     queue<pair<string, string>> q;
     for (int i=0; i<record.size(); i++) {
-        string str="", cmd="", id="", name="";
+        string cmd="", id="", name="";
         stringstream ss;
         ss.str(record[i]);
-        int cnt=0;
-        while (ss >> str) {
-            if (cnt==0) cmd = str;
-            if (cnt==1) id = str;
-            if (cnt==2) name = str;
-            cnt++;
-        }
+        ss >> cmd;
+        ss >> id;
+        ss >> name;
+        
         // Leave 일때는 name이 공백이므로 바꾸면 안됨
         if (cmd == "Change" || cmd == "Enter") {
             id_hash[id] = name;
