@@ -26,6 +26,7 @@ vector<int> solution(int n, long long k) {
         num.erase(num.begin()+idx);
         cnt++;
         now %= tmp;
+        // -1 해줘야 하므로 0일 경우 같은 수로 유지
 		if (now == 0)
 			now = tmp;
     }
