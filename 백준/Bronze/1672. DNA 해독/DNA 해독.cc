@@ -28,10 +28,10 @@ int main()
 
     cin >> n;
     cin >> s;
-    if (n == 1) {
-        cout << s << endl;
-        return 0;
-    }
+    // if (n == 1) {
+    //    cout << s << endl;
+    //     return 0;
+    // }
     while (true) {
         if (s.size() == 1)
             break;
