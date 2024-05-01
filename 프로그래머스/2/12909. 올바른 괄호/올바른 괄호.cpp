@@ -7,7 +7,7 @@ using namespace std;
 bool solution(string s)
 {
     stack<char> stk;
-    
+    if (s[0] == ')') return false;
     stk.push(s[0]);
     for (int i=1; i<s.size(); i++){
         if (s[i]=='(') stk.push(s[i]);
