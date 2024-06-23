@@ -1,6 +1,6 @@
 # [level 2] [PCCP 기출문제] 3번 / 아날로그 시계 - 250135 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/250135?language=python3) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/250135?language=python) 
 
 ### 성능 요약
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 06월 23일 16:22:33
+2024년 06월 23일 16:23:16
 
 ### 문제 설명
 
