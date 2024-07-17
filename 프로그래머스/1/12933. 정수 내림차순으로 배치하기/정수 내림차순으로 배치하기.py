@@ -3,6 +3,8 @@ def solution(n):
     for i in sorted(str(n), reverse=True):
         answer += i
         
-    return int(answer)
+    # return int(answer)
+    # or
+    return int("".join(sorted(str(n), reverse=True)))
         
     
