@@ -15,16 +15,16 @@ def solution(genres, plays):
     answer = []
     dic = {}
     album_list = []
-    for i in range(len(genres)):
-        dic[genres[i]] = dic.get(genres[i], 0) + plays[i]
-        album_list.append(album(genres[i], plays[i], i))
+    for idx, genre in enumerate(genres):
+        dic[genre] = dic.get(genre, 0) + plays[idx]
+        album_list.append(album(genre, plays[idx], idx))
 
     dic = sorted(dic.items(), key=lambda dic:dic[1], reverse=True)
     album_list = sorted(album_list, key=cmp_to_key(album_compare))
-
-
+    # print(dic)
 
     while len(dic) > 0:
+        # 정렬했으므로 dic은 list 타입이다
         play_genre = dic.pop(0)
         # print(play_genre)
         cnt = 0;
