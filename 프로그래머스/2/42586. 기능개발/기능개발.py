@@ -13,7 +13,7 @@ def solution(progresses, speeds):
                 daysLeft[i+1] = daysLeft[i]
                 count += 1
                 
-        except IndexError:
+        except Exception:
             answer.append(count)
             
     return answer 
