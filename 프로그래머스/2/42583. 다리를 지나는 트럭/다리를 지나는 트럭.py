@@ -5,13 +5,13 @@ def solution(bridge_length, weight, truck_weights):
     time = 1
     
     while True:
-        if len(in_time) > 0:
+        if in_time:
             if time - in_time[0] >= bridge_length:
                 in_time.pop(0)
                 curr_w.pop(0) 
             
         # curr_w가 weight 이하인 경우 현재 시간 큐에 넣기
-        if len(truck_weights) > 0:
+        if truck_weights:
             if sum(curr_w)+truck_weights[0] <= weight:
                 curr_w.append(truck_weights[0]) 
                 truck_weights.pop(0)
